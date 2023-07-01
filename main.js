@@ -15,3 +15,13 @@ document.body.innerText = JSON.stringify(Object.entries(user)) // Return vector 
 
 // In ( Verifica se tem alguma coisa dentro do objeto )
 //
+
+// Desestruturação
+
+function showAge({ age: Idade }) {
+  return Idade
+}
+
+const { address, age: Age, nickname = 'Defina seu nickname'  } = user
+// document.body.innerText = JSON.stringify({address, Age, nickname}) 
+document.body.innerText = showAge(user)
